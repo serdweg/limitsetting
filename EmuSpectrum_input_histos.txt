@@ -1,0 +1,18 @@
+# number of channels
+imax 1
+# number of background types
+jmax 1
+# number of nuisance parameters (sources of systematical uncertainties)
+#kmax *
+kmax 0
+---------------
+shapes * * @root_input_file@ $PROCESS
+---------------
+bin lfv
+observation @num_observed_events@
+------------------------------
+bin lfv lfv
+process signal bkg_tot
+process 0 1
+--------------------------------
+rate @rates@
